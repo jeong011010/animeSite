@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import styles from "./Anime.module.css"
 
-function Anime({ id, score, coverImg, title, synopsis, year, }) {
+function Anime({ id, score, coverImg, title, year, }) {
   return (
     <div className={styles.anime}>
       <img src={coverImg} alt={title} className={styles.anime__img} />
@@ -20,7 +20,6 @@ Anime.propTypes = {
   id: PropTypes.number.isRequired,
   coverImg: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  synopsis: PropTypes.string.isRequired,
 }
 
 export default Anime;

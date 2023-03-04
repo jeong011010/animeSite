@@ -1,0 +1,52 @@
+.NavBody {
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    z-index: 10;
+    position: relative;
+    transition: background-color 0.4s ease 0s, box-shadow 0.4s ease 0s;
+    background-color: transparent;
+    box-shadow: transparent 0px 1px 0px 0px;
+}
+
+.SideNav{
+      padding-left: 3.125rem;
+    padding-right: 3.125rem;
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    color: rgb(255, 255, 255);
+}
+
+.Title{
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.TitleStyle{
+  height: 2.25rem;
+}
+
+.SideMenu{
+  flex: 1 1 0%;
+  margin-left: 2.5rem;
+  transition: color 0.4s ease 0s;
+  display: flex;
+  position: relative;
+}
+
+.SideMenu a{
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.SideMenu a + a {
+    margin-left: 1.5rem;
+}

@@ -1,6 +1,5 @@
 .anime {
   font-weight: 300;
-  padding: 20px;
   display: block;
   grid-template-columns: minmax(150px, 1fr) 2fr;
   grid-gap: 20px;
@@ -10,9 +9,10 @@
 
 .anime__img {
   position: relative;
-  max-width: 150px;
+  height: 180px;
   width: 100%;
   margin-right: 30px;
+  border-radius: 5px;
   box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
     0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
 }
