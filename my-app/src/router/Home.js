@@ -7,20 +7,46 @@ import lab from "../img/leftArrow.png";
 import load from "../img/loading.gif";
 import NavBar from "../components/NavBar";
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";	// 추가
+import 'swiper/scss'
+import 'swiper/scss/navigation'
+import 'swiper/scss/pagination'
+
+SwiperCore.use([Navigation, Pagination, Autoplay])
+
 function Home() {
-  const [loading, setLoading] = useState(true);
-  const [animes, setAnimes] = useState([]);
+  const [loadingTrend, setLoadingTrend] = useState(true);
+  const [loadingBanner, setLoadingBanner] = useState(true);
+  const [animesTrend, setAnimesTrend] = useState([]);
+  const [animesBanner, setAnimesBanner] = useState([]);
   const [pages, setPages] = useState(0);
-  const getAnimes = async () => {
+
+  const getAnimesTrend = async () => {
     const json = await (await fetch(
       `https://kitsu.io/api/edge/anime?sort=ratingRank&page[limit]=5&page[offset]=${pages}`
     )).json();
-    setLoading(false);
-    setAnimes(json.data);
+    setLoadingTrend(false);
+    setAnimesTrend(json.data);
   }
+  const getAnimesBanner = async () => {
+    const json = await (await fetch(
+      `https://kitsu.io/api/edge/trending/anime`
+    )).json();
+    setAnimesBanner(json.data);
+    console.log("!");
+    console.log(animesBanner);
+    setLoadingBanner(false);
+  }
+
   useEffect(() => {
-    getAnimes();
-    setLoading(true);
+    getAnimesBanner();
+    setLoadingTrend(true);
+  }, []);
+
+  useEffect(() => {
+    getAnimesTrend();
+    setLoadingTrend(true);
   }, [pages]);
 
 
@@ -28,28 +54,41 @@ function Home() {
 
   let loadArray = [1, 2, 3, 4, 5];
 
-  // banner 제작중 23.3.4
   return (
     <div>
       <NavBar />
-      <div className={styles.Banner}>
-        {}
-      </div>
-
+      {
+        loadingBanner ? <div></div> :
+          <div>
+            <Swiper
+              className="banner"
+              spaceBetween={50}
+              slidesPerView={1}
+              navigation
+              pagination={{ clickable: true }}
+              autoplay={{ delay: 5000 }}
+              loop={true}
+            >
+              {animesBanner.map((anime, index) =>
+                <SwiperSlide key={index}><img className={styles.animesBanner} src={anime.attributes.coverImage.original} alt="배너이미지" /></SwiperSlide>
+              )}
+            </Swiper>
+          </div>
+      }
 
 
       <div className={styles.animesScroll}>
-        {loading ?
+        {loadingTrend ?
           <div>
-            <div className={styles.animes}>
+            <div className={styles.animesTrend}>
               {loadArray.map((id) =>
-                <img key={id} className={styles.loading} src={load} alt="loading"></img>
+                <img key={id} className={styles.loadingTrend} src={load} alt="loading"></img>
               )}
             </div>
 
           </div> :
-          <div className={styles.animes}>
-            {animes.map((anime, index) =>
+          <div className={styles.animesTrend}>
+            {animesTrend.map((anime, index) =>
               <Anime
                 key={anime.id}
                 score={index + 1 + pages}
@@ -61,6 +100,7 @@ function Home() {
             )}
           </div>
         }
+
         <img className={`${styles.btn} ${styles.left}`} src={lab} alt="leftArrowBtn" onClick={() => (pages === 0 ? setPages(25) : setPages(pages - 5))} />
         <img className={`${styles.btn} ${styles.right}`} src={rab} alt="rightArrowBtn" onClick={() => (pages === 25 ? setPages(0) : setPages(pages + 5))} />
       </div>
