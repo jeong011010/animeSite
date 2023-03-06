@@ -19,33 +19,7 @@ function NavBar() {
           <a href="/membership">멤버십</a>
         </div>
         <div className={styles.d}>
-          <div className={styles.d}>
-            <div className={styles.d}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fillRule="evenodd" clipRule="evenodd" d="M15.222 16.657a7.608 7.608 0 111.435-1.435l4.05 4.05a1 1 0 010 1.415l-.02.02a1 1 0 01-1.415 0l-4.05-4.05zm.994-6.05a5.608 5.608 0 11-11.216 0 5.608 5.608 0 0111.216 0z" fill="currentColor"></path>
-              </svg>
-              <div className={styles.d}>
-                <input data-cy="search-input" placeholder="제목, 제작사, 감독으로 검색 (초성)" className={styles.d} />
-              </div>
-            </div>
-            <div data-cy="search-icon" className={styles.d}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fillRule="evenodd" clipRule="evenodd" d="M15.222 16.657a7.608 7.608 0 111.435-1.435l4.05 4.05a1 1 0 010 1.415l-.02.02a1 1 0 01-1.415 0l-4.05-4.05zm.994-6.05a5.608 5.608 0 11-11.216 0 5.608 5.608 0 0111.216 0z" fill="currentColor"></path>
-              </svg>
-            </div>
-          </div>
           <a data-cy="login-button" className={styles.d} href="/auth/login?next=/">로그인/가입</a>
-        </div>
-      </div>
-      <div className={styles.d}>
-        <div className={styles.d}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.d}>
-            <path fillRule="evenodd" clipRule="evenodd" d="M15.222 16.657a7.608 7.608 0 111.435-1.435l4.05 4.05a1 1 0 010 1.415l-.02.02a1 1 0 01-1.415 0l-4.05-4.05zm.994-6.05a5.608 5.608 0 11-11.216 0 5.608 5.608 0 0111.216 0z" fill="currentColor"></path>
-          </svg>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.d}>
-            <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-            </path>
-          </svg>
         </div>
       </div>
     </div>

@@ -7,6 +7,7 @@ import lab from "../img/leftArrow.png";
 import load from "../img/loading.gif";
 import NavBar from "../components/NavBar";
 
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";	// 추가
 import 'swiper/scss'
@@ -54,6 +55,8 @@ function Home() {
 
   let loadArray = [1, 2, 3, 4, 5];
 
+  console.log(animesBanner);
+
   return (
     <div>
       <NavBar />
@@ -70,7 +73,12 @@ function Home() {
               loop={true}
             >
               {animesBanner.map((anime, index) =>
-                <SwiperSlide key={index}><img className={styles.animesBanner} src={anime.attributes.coverImage.original} alt="배너이미지" /></SwiperSlide>
+                <SwiperSlide key={index} className={styles.animesBanner}>
+                  <Link to={`/anime/${anime.id}`}>
+                    <img src={anime.attributes.coverImage.original} alt="배너이미지" />
+                    <h1>{anime.attributes.canonicalTitle}</h1>
+                  </Link>
+                </SwiperSlide>
               )}
             </Swiper>
           </div>

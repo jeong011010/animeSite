@@ -6,7 +6,10 @@
     position: relative;
     transition: background-color 0.4s ease 0s, box-shadow 0.4s ease 0s;
     background-color: transparent;
-    box-shadow: transparent 0px 1px 0px 0px;
+    box-shadow: transparent 0px 1px 0px 0px;    
+  font-family: inherit;
+    line-height: 1.5;
+    letter-spacing: normal;
 }
 
 .SideNav{
@@ -37,14 +40,18 @@
   transition: color 0.4s ease 0s;
   display: flex;
   position: relative;
+  top:-1.5px;
 }
 
 .SideMenu a{
   display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  font-weight: 700;
-  font-size: 0.875rem;
+    align-items: center;
+    font-weight: 550;
+    font-size: 0.8rem;
+    text-decoration-line: none;
+    color: black;
+    top: 10px;
+    bottom: 50px;
 }
 
 .SideMenu a + a {
