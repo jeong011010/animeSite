@@ -7,7 +7,7 @@ function Login() {
 
   return (
     <div>
-      login 창
+      login 창 입니다
     </div>
   )
 }
