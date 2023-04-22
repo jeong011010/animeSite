@@ -13,6 +13,9 @@ function Anime({ id, score, coverImg, title, year, }) {
         </h2></div>
 
     </div >
+
+
+    
   )
 }
 
