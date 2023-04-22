@@ -1,0 +1,54 @@
+.animes {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(360px, 1fr));
+  grid-gap: 20px;
+}
+
+.btn {
+  visibility: hidden;
+  opacity: 0;
+  margin-top: 125px;
+  height: 60px;
+  position: absolute;
+  transition: .5s ease-out;
+  border-radius: 5px;
+}
+
+.right{
+  right: 0;
+}
+
+.left{
+  left: 0;
+}
+
+.loading{
+  height: 100px;
+  width: 100px;
+  margin-top: 110px;
+  margin-bottom: 181px;
+  margin-left: 120px;
+  margin-right: 150px;
+}
+
+.animesScroll {
+  margin-right: 20px;
+  margin-left: 20px;
+  position: relative;
+  justify-content: space-between;
+  display:flex;
+  flex-direction: row;
+  transition: all 2s;
+}
+
+.animesScroll:hover .btn{
+  visibility: visible;
+  background-color: rgba( 255, 255, 255, 0.5 );
+  opacity: 1;
+}
+
+.animeTitle{
+  margin-left: 20px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}

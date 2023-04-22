@@ -1,0 +1,38 @@
+.coverImg{
+  text-align: center;
+  opacity: 0.5;
+  z-index: 1;
+  position: relative;
+}
+
+.Img{
+  width: 100%;
+}
+
+.noImg{
+}
+
+.youtube{
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  margin-top: -230px;
+}
+
+.youtubeBox{
+  background-color: rgba( 0, 0, 0, 0.5 );
+  border-radius: 5px;
+  width: 810px;
+  height: 460px;
+}
+
+.Video{
+  padding-top: 5px;
+  
+}
+
+.center{
+  justify-content: center;
+  
+  display: flex;
+}

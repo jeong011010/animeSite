@@ -21,55 +21,6 @@
   margin-left: 20px;
 }
 
-.animesTrend {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(200px, 1fr));
-  grid-gap: 20px;
-}
-
-.btn {
-  visibility: hidden;
-  opacity: 0;
-  margin-top: 60px;
-  height: 60px;
-  position: absolute;
-  transition: .5s ease-out;
-  border-radius: 5px;
-}
-
-.right{
-  right: 0;
-}
-
-.left{
-  left: 0;
-}
-
-
-.loadingTrend{
-  height: 100px;
-  width: 100px;
-  margin-left: 120px;
-  margin-right: 150px;
-}
-
-.animesScroll {
-  margin-top: 50px;
-  margin-right: 20px;
-  margin-left: 20px;
-  position: relative;
-  justify-content: space-between;
-  display:flex;
-  flex-direction: row;
-  transition: all 2s;
-}
-
-.animesScroll:hover .btn{
-  visibility: visible;
-  background-color: rgba( 255, 255, 255, 0.5 );
-  opacity: 1;
-}
-
 .animesBanner img{
   position: relative;
   height: 600px;
@@ -85,4 +36,28 @@
     font-size: 50px;
     max-width: 550px;
     font-family: 'Titillium Web', sans-serif;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  --swiper-theme-color:#fff;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
