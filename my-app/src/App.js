@@ -1,4 +1,8 @@
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom"
 import Home from "./router/Home"
 import Login from "./router/Login"
 import Detail from "./router/Detail"
@@ -10,7 +14,7 @@ function App() {
     <Router>
       <ScrollTop />
       <Switch>
-        <Route exact path="/">
+        <Route path="/">
           <Home />
         </Route>
         <Route path="/anime/:id">
