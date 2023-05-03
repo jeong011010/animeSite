@@ -14,9 +14,9 @@ function App() {
     <Router>
       <ScrollTop />
       <Routes>
-        <Route path="/anime/:id" element={<Detail />} />
-        <Route path="/auth" element={<Login />} />
-        <Route path="/" element={<Home />} />
+        <Route path={"/anime/:id"} element={<Detail />} />
+        <Route path={"/auth"} element={<Login />} />
+        <Route path={"/"} element={<Home />} />
       </Routes>
     </Router>
   );
