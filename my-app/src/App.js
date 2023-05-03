@@ -14,14 +14,14 @@ function App() {
     <Router>
       <ScrollTop />
       <Switch>
-        <Route path="/">
-          <Home />
-        </Route>
-        <Route path="/anime/:id">
+        <Route path="/animeSite/anime/:id">
           <Detail />
         </Route>
-        <Route path="/auth">
+        <Route path="/animeSite/auth">
           <Login />
+        </Route>
+        <Route path="/animeSite">
+          <Home />
         </Route>
       </Switch>
     </Router>
