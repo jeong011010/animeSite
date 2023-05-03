@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import noImg from "../img/noImg.png";
 import styles from "./Detail.module.css";
 import YouTube from 'react-youtube';

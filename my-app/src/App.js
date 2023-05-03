@@ -1,7 +1,7 @@
 import {
-  BrowserRouter as Router,
-  Switch,
+  HashRouter as Router,
   Route,
+  Routes
 } from "react-router-dom"
 import Home from "./router/Home"
 import Login from "./router/Login"
@@ -13,17 +13,11 @@ function App() {
   return (
     <Router>
       <ScrollTop />
-      <Switch>
-        <Route path="/animeSite/anime/:id">
-          <Detail />
-        </Route>
-        <Route path="/animeSite/auth">
-          <Login />
-        </Route>
-        <Route path="/animeSite">
-          <Home />
-        </Route>
-      </Switch>
+      <Routes>
+        <Route path="/anime/:id" element={<Detail />} />
+        <Route path="/auth" element={<Login />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
     </Router>
   );
 }
