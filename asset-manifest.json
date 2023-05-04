@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/animeSite/static/css/main.9aa2a8a8.css",
+    "main.css": "/animeSite/static/css/main.d25b88c9.css",
     "main.js": "/animeSite/static/js/main.07a2f020.js",
     "static/media/loading.gif": "/animeSite/static/media/loading.c034cce9829b77c983fe.gif",
     "static/media/noImg.png": "/animeSite/static/media/noImg.0ccd7fc72a21c63df110.png",
     "index.html": "/animeSite/index.html",
-    "main.9aa2a8a8.css.map": "/animeSite/static/css/main.9aa2a8a8.css.map",
+    "main.d25b88c9.css.map": "/animeSite/static/css/main.d25b88c9.css.map",
     "main.07a2f020.js.map": "/animeSite/static/js/main.07a2f020.js.map"
   },
   "entrypoints": [
-    "static/css/main.9aa2a8a8.css",
+    "static/css/main.d25b88c9.css",
     "static/js/main.07a2f020.js"
   ]
 }
